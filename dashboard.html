@@ -1,0 +1,9 @@
+<div style="padding: 20px;">
+  <h1>Welcome to the Dashboard!</h1>
+  <p *ngIf="authService.currentUser$ | async as user">
+    Logged in as: <strong>{{ user.username }}</strong>
+  </p>
+  <button (click)="onLogout()" style="background-color: #ff4444; color: white; border: none; padding: 10px; cursor: pointer; border-radius: 4px;">
+    Logout
+  </button>
+</div>
